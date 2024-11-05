@@ -33,6 +33,24 @@ def main():
         ManufacturerID = selected_product[3]  
         BrandID = selected_product[4]  
 
+    # 3
+        query_manufacturer = f"""
+        SELECT Manufacturer
+        FROM tManufacturer
+        WHERE ManufacturerID = {ManufacturerID}
+        """
+       
+    # 4 Manufacturer name
+        manufacturer = fetch_data(query_manufacturer)
+        manufacturer_name = manufacturer[0][0] if manufacturer else "Unknown Manufacturer"
+
+    # 5 
+        query_brand = f"""
+        SELECT Brand
+        FROM tBrand
+        WHERE BrandID = {BrandID}
+        """
+
 
 if __name__ == "__main__":
     main()
