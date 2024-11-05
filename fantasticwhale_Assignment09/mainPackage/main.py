@@ -1,11 +1,22 @@
+# Name: Alexis Tipkemper-Sparks / Kayla Wilson / Jared Rababy 
+# email:  tipkemam@mail.uc.edu / wilso5ky@mail.uc.edu /rababyjd@mail.uc.edu
+# Assignment Number: Assignment 09
+# Due Date: 11/07/2024
+# Course #/Section:  IS 4010
+# Semester/Year: Fall 2024
+# Brief Description of the assignment:  Connection to sql server db to pull info 
+
+# Brief Description of what this module does: Practice connection to sql server, extract data, produces output
+# Citations: GeeksforGeeks / W3Schools / InClass from last week
+# Anything else that's relevant: N/A Github makes us sad
 
 #main.py
 
-from utilsPackage.utils import get_db_connection  # Importing the connection function from utils
+from utilsPackage.utils import get_db_connection 
 import pyodbc #For Question 2
 import random
 
-def fetch_data(query):
+def fetch_data(query): #Altered 
     conn = get_db_connection()
     if conn is not None:
         try:
@@ -67,7 +78,7 @@ def main():
         WHERE (dbo.tTransaction.TransactionTypeID = 1) AND (dbo.tTransactionDetail.ProductID = {ProductID})
         """
        
-        # Total quantity sold
+        # TQ Sold
         sales_data = fetch_data(query_sales)
         total_sold = sales_data[0][0] if sales_data else 0 
 
@@ -77,7 +88,7 @@ def main():
             f"has sold a total of {total_sold} items."
         )
 
-        # Print the string sentence
+        # Print the string / Only output necessary
         print(output_sentence)
     else:
         print("No products found.")
