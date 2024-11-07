@@ -84,7 +84,10 @@ def main():
 
     # 7
 
-        # Alexis
+        # Kayla
+        print(f"'{Description}' has sold {total_sold} items, making it a popular choice from {manufacturer_name}'s {brand_name} brand.")
+       
+       # Alexis
         print(f"Selected Product ID: {ProductID} - {Description}, manufactured by {manufacturer_name} and branded as {brand_name}. Total sales amount to {total_sold} items.")
 
         # Jared
