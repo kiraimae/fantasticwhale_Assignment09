@@ -83,15 +83,21 @@ def main():
         total_sold = sales_data[0][0] if sales_data else 0 
 
     # 7
+
+        # Alexis
+        print(f"Selected Product ID: {ProductID} - {Description}, manufactured by {manufacturer_name} and branded as {brand_name}. Total sales amount to {total_sold} items.")
+
+        # Jared
         output_sentence = (
             f"The product '{Description}' from {manufacturer_name} under the brand '{brand_name}' "
             f"has sold a total of {total_sold} items."
-        )
+        ) 
 
         # Print the string / Only output necessary
         print(output_sentence)
     else:
         print("No products found.")
+        
 
 
 if __name__ == "__main__":
